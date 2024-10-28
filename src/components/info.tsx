@@ -1,3 +1,5 @@
+"use client"; // Mark as client-side
+
 import React, { useState } from "react";
 import { FaBolt, FaPiggyBank, FaShieldAlt } from "react-icons/fa"; // Importing icons
 import { motion } from "framer-motion"; // Importing motion from framer-motion

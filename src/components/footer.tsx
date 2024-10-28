@@ -4,8 +4,10 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaLinkedin,
-  FaTimes,
+  FaFacebook,
+  FaInstagram,
 } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +16,13 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
           {/* Logo and Contact Info */}
           <div className="flex flex-col space-y-4 w-full md:w-1/4">
-            <img src="/logo.svg" alt="EVI Logo" className="w-32 mb-4" />
+            <Image
+              src="/logo.svg"
+              alt="EVI Logo"
+              width={128}
+              height={32}
+              className="mb-4"
+            />
 
             <div className="flex items-center space-x-2 text-gray-400">
               <FaPhoneAlt />
@@ -94,8 +102,8 @@ const Footer: React.FC = () => {
               Stay Connected with us on
             </h4>
             <div className="flex space-x-4">
-              <FaTimes className="text-white text-2xl" />
-              <FaTimes className="text-white text-2xl" />
+              <FaFacebook className="text-white text-2xl" />
+              <FaInstagram className="text-white text-2xl" />
               <FaLinkedin className="text-white text-2xl" />
             </div>
           </div>

@@ -36,10 +36,14 @@ const FeatureSection: React.FC = () => {
     { label: "Payload Capacity", endValue: 400, unit: "Kg" },
   ];
 
-  // Use the custom hook for counting
-  const counts = features.map((feature) =>
-    useCounter(0, feature.endValue, 1500)
-  );
+  // Use the custom hook for counting for each feature
+  const rangeCount = useCounter(0, features[0].endValue, 1500);
+  const speedCount = useCounter(0, features[1].endValue, 1500);
+  const torqueCount = useCounter(0, features[2].endValue, 1500);
+  const payloadCount = useCounter(0, features[3].endValue, 1500);
+
+  // Map counts to each feature
+  const counts = [rangeCount, speedCount, torqueCount, payloadCount];
 
   return (
     <div className="w-screen bg-white py-16">

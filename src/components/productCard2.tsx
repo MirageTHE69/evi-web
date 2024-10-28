@@ -1,3 +1,5 @@
+"use client"; // Mark as client-side
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
